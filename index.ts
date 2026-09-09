@@ -10,6 +10,10 @@ function fizzBuzz() : void {
             res += "Buzz"
         }
 
+        if (number % 7 == 0) {
+            res += "Bang"
+        }
+
         if (res === "") {
             res = String(number)
         }
