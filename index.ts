@@ -6,6 +6,10 @@ function fizzBuzz() : void {
             res += "Fizz"
         }  
 
+        if (number % 13 == 0) {
+            res += "Fezz"
+        }
+
         if (number % 5 == 0) {
             res += "Buzz"
         }
@@ -15,7 +19,11 @@ function fizzBuzz() : void {
         }
 
         if (number % 11 == 0) {
-            res = "Bong"
+            if (number % 13 == 0) {
+                res = "FezzBong"
+            } else {
+                res = "Bong"
+            }
         }
 
         if (res === "") {
