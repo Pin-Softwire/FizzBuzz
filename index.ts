@@ -1,36 +1,45 @@
 function fizzBuzz() : void {
     let number : number = 1;
     while (number <= 100) {
-        let res : string = ""
+        let res: string[] = [];
+
         if (number % 3 === 0) {
-            res += "Fizz"
+            res.push("Fizz");
         }  
 
         if (number % 13 == 0) {
-            res += "Fezz"
+            res.push("Fezz");
         }
 
         if (number % 5 == 0) {
-            res += "Buzz"
+            res.push("Buzz");
         }
 
         if (number % 7 == 0) {
-            res += "Bang"
+            res.push("Bang");
         }
 
         if (number % 11 == 0) {
             if (number % 13 == 0) {
-                res = "FezzBong"
+                res = ["Fezz", "Bong"];
             } else {
-                res = "Bong"
+                res = ["Bong"];
             }
         }
 
-        if (res === "") {
-            res = String(number)
+
+        if (number % 17 == 0) {
+            res.reverse();
+        }
+
+        if (res.length === 0) {
+            res.push(String(number));
         }
         
-        console.log(res)
+        const final_res: string = res.join('');
+
+
+        console.log(final_res);
         number++;
     } 
 
